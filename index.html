@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Travel</title>
+</head>
+
+<body>
+    <header>
+        <section class="flex justify-around pt-[50px] items-center	">
+            <div data-aos="zoom-in-left">
+                <img src="./images/logo.svg" alt="">
+            </div>
+            <ul style="font-family: Inter;" data-aos="zoom-in"
+                class="font-[Inter] font-medium flex justify-around gap-[30px] text-[#B8BECD] items-center	max-[630px]:hidden" ">
+                <li><a href=" #" class="hover:text-black  duration-[0.7s]">Home</a></li>
+                <li><a href="#" class="hover:text-black  duration-[0.7s]">Destinations</a></li>
+                <li><a href="#" class="hover:text-black  duration-[0.7s]">About</a></li>
+                <li><a href="#" class="hover:text-black  duration-[0.7s]">Partner</a></li>
+            </ul>
+            <form data-aos="flip-up">
+                <button
+                    class="text-[yellow-400] hover:text-white border border-yellow-400 hover:bg-[#FB8F1D] focus:ring-4 focus:outline-none focus:ring-[#FB8F1D] font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white  dark:focus:ring-[#FB8F1D] duration-[0.7s] max-[610px]:hidden">
+                    Login
+                </button>
+                <button
+                    class="text-[yellow-400] hover:text-white border border-yellow-400 hover:bg-[#FB8F1D] focus:ring-4 focus:outline-none focus:ring-[#FB8F1D] font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white  duration-[0.7s] dark:focus:ring-[#FB8F1D] max-[610px]:hidden">
+                    Register
+                </button>
+            </form>
+            <div class="hidden max-[630px]:block text-[25px] text-[#FB8F1D]">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="res flex  justify-center">
+            <section class="flex justify-around pt-[100px] max-[1131px]:block  gap-[100px]">
+                <div class="hidden max-[1115px]:block" data-aos="fade-down">
+                    <img src="./images/sayohat.svg" alt="">
+                </div>
+                <div data-aos="fade-down-right">
+                    <p style="font-family: Playfair Display;
+            line-height: 80px;" class="  text-[64px]  font-bold max-[1119px]:text-center ">
+                        Explore and <br>
+                        Travel
+                    </p>
+                    <p style="font-family: Inter;
+            line-height: 27px;" class="font-semibold  pt-[70px] text-[22px]	max-[1119px]:text-center	 ">Holiday finder
+                    </p>
+                    <div
+                        class="w-[32px] h-[2px]  bg-[#202336] mt-[20px] max-[1119px]:flex  max-[1118px]:m-[auto] max-[1115px]:mt-[15px] ">
+                    </div>
+                    <div data-aos="fade-down">
+                        <div
+                            class="flex gap-[30px]  max-[928px]:pt-[20px] max-[530px]:block max-[530px]:pb-[20px] mt-[40px]">
+                            <select id="countries"
+                                class="bg-gray-50 border border-black text-black text-sm rounded-lg focus:ring-white  block w-full p-2.5 dark:bg-white dark:border-black dark:placeholder-gray-400 dark:text-black dark:focus:ring-black dark:focus:border-black mb-[20px]">
+                                <option selected>Location</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                            </select>
+                            <select id="countries"
+                                class="bg-gray-50 border border-black text-black text-sm rounded-lg focus:ring-white  block w-full p-2.5 dark:bg-white dark:border-black dark:placeholder-gray-400 dark:text-black dark:focus:ring-black dark:focus:border-black mb-[20px]">
+                                <option selected>Activity</option>
+                                <option value="US">Good</option>
+                                <option value="CA">Normal</option>
+                                <option value="FR">Bad</option>
+                                <option value="DE"></option>
+                            </select>
+                        </div>
+                        <div class="flex gap-[30px]  max-[530px]:block">
+                            <select id="countries"
+                                class="bg-gray-50 border border-black text-black text-sm rounded-lg focus:ring-white  block w-full p-2.5 dark:bg-white dark:border-black dark:placeholder-gray-400 dark:text-black dark:focus:ring-black dark:focus:border-black mb-[20px]">
+                                <option selected>Grade</option>
+                                <option value="US">10</option>
+                                <option value="CA">8</option>
+                                <option value="FR">6</option>
+                                <option value="DE">3</option>
+                            </select>
+                            <select id="countries"
+                                class="bg-gray-50 border border-black text-black text-sm rounded-lg focus:ring-white  block w-full p-2.5 dark:bg-white dark:border-black dark:placeholder-gray-400 dark:text-black dark:focus:ring-black dark:focus:border-black mb-[20px]">
+                                <option selected>Date</option>
+                                <option value="US">1 April</option>
+                                <option value="CA">1 May</option>
+                                <option value="FR">1 December</option>
+                                <option value="DE">1 October</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button
+                        class="w-[180px] mt-[30px]    text-[centr] text-[yellow-400] hover:text-white border border-yellow-400 hover:bg-[#FB8F1D] focus:ring-4 focus:outline-none focus:ring-[#FB8F1D] font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white  dark:focus:ring-[#FB8F1D] duration-[0.7s] max-[1119px]:flex  max-[1118px]:m-[auto] max-[1115px]:mt-[15px] ">
+                        Explore
+                    </button>
+                </div>
+                <div class="mt-[-63px] max-[1115px]:hidden max-[929px]:hidden" data-aos="fade-left">
+                    <img src="./images/sayohat.svg" alt="">
+                </div>
+
+            </section>
+        </section>
+        <section class="flex justify-center mt-[-71px]">
+            <section class="flex justify-around pt-[200px] gap-[50px] max-[1288px]:block">
+                <div data-aos="fade-right">
+                    <img src="./images/parashut.svg" alt="">
+                </div>
+                <div class="pt-[90px] max-[1288px]:text-center" data-aos="fade-up-right">
+                    <p style="font-family: Playfair Display;
+            line-height: 50px;" class="  text-[36px]  font-bold max-[1119px]:text-center ">
+                        A new way to explore the <br> world
+                    </p>
+                    <p style="font-family: Muli; font-weight: 300; line-height: 30px;"
+                        class="text-[21px] text-[#7D7987] pt-[20px]">
+                        For decades travellers have reached for Lonely Planet <br>
+                        books when looking to plan and execute their perfect <br>
+                        trip, but now, they can also let Lonely Planet Experiences <br>
+                        lead the way
+                    </p>
+
+                    <button
+                        class="w-[180px] mt-[30px]    text-[centr] text-[yellow-400] hover:text-white border border-yellow-400 hover:bg-[#FB8F1D] focus:ring-4 focus:outline-none focus:ring-[#FB8F1D] font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white  dark:focus:ring-[#FB8F1D] duration-[0.7s] max-[1119px]:flex  max-[1118px]:m-[auto] max-[1115px]:mt-[25px] ">
+                        Learn more
+                    </button>
+                </div>
+            </section>
+        </section>
+        <section class="pb-[100px]">
+            <div class="flex justify-around pt-[100px]">
+                <p style="font-family: Playfair Display;
+                line-height: 50px;" class="  text-[36px]  font-bold max-[1119px]:text-center">Featured destinations</p>
+                <span class=" flex gap-[11px] items-center text-[#FB8F1D] ">
+                    <p>View all</p>
+                    <i class=" fa-solid fa-chevron-right"></i>
+                </span>
+            </div>
+            <ul class=" flex justify-center gap-[30px] pt-[50px]">
+                <li style=" background-image: url(./images/image_1.svg);
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               width: 261px;
+               height: 337px;
+               border-radius: 5px;" class=" box  pt-[280px]">
+                    <div class=" box-a  w-[120px] h-[56px] bg-white rounded animatsion">
+                        <p style=" font-family: Inter; line-height: 25px;" class="text-[17px] font-semibold pt-[11px]">
+                            Raja Ampat
+                        </p>
+                        <p style="font-family: Inter;
+                        line-height: 24px;" class="text-[15px] text-[#80908E] font-medium	">Indonesia</p>
+                    </div>
+                </li>
+                <li style=" background-image: url(./images/image_2.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 261px;
+                height: 337px;
+                border-radius: 5px;" class=" box  pt-[280px]">
+                    <div class=" box-a  w-[120px] h-[56px] bg-white rounded animatsion">
+                        <p style=" font-family: Inter;  line-height: 25px;" class="text-[17px] font-semibold pt-[11px]">
+                            Fanjingshan
+
+                        </p>
+                        <p style="font-family: Inter;
+                         line-height: 24px;" class="text-[15px] text-[#80908E] font-medium	">China</p>
+                    </div>
+                </li>
+                <li style=" background-image: url(./images/image_3.svg);
+                 background-position: center;
+                 background-repeat: no-repeat;
+                 background-size: cover;
+                 width: 261px;
+                 height: 337px;
+                 border-radius: 5px;" class=" box  pt-[280px]">
+                    <div class=" box-a  w-[120px] h-[56px] bg-white rounded animatsion">
+                        <p style=" font-family: Inter; line-height: 25px;" class="text-[17px] font-semibold pt-[11px]">
+                            Vevey
+
+                        </p>
+                        <p style="font-family: Inter;
+                          line-height: 24px;" class="text-[15px] text-[#80908E] font-medium	"> Switzerland</p>
+                    </div>
+                </li>
+                <li style=" background-image: url(./images/image_4.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  width: 261px;
+                  height: 337px;
+                  border-radius: 5px;" class=" box  pt-[280px]">
+                    <div class=" box-a  w-[120px] h-[56px] bg-white rounded animatsion">
+                        <p style=" font-family: Inter; line-height: 25px;" class="text-[17px] font-semibold pt-[11px]">
+                            Skadar
+
+                        </p>
+                        <p style="font-family: Inter;
+                           line-height: 24px;" class="text-[15px] text-[#80908E] font-medium	"> Montenegro</p>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+        <section class="flex justify-center mt-[-71px]">
+            <section class="flex justify-around pt-[200px] gap-[50px] max-[1288px]:block">
+                <div class="pt-[90px] max-[1288px]:text-center" data-aos="fade-up-right">
+                    <p style="font-family: Playfair Display;
+            line-height: 50px;" class="  text-[36px]  font-bold max-[1119px]:text-center ">
+                        Guides by Thousand <br>
+                        Sunny
+                    </p>
+                    <p style="font-family: Muli; font-weight: 300; line-height: 30px;"
+                        class="text-[21px] text-[#7D7987] pt-[20px]">
+                        Packed with tips and advice from our on-the-ground <br>
+                        experts, our city guides app (iOS and Android) is the <br>
+                        ultimate resource before and during a trip.
+                    </p>
+
+                    <button
+                        class="w-[180px] mt-[30px]    text-[centr] text-[yellow-400] hover:text-white border border-yellow-400 hover:bg-[#FB8F1D] focus:ring-4 focus:outline-none focus:ring-[#FB8F1D] font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white  dark:focus:ring-[#FB8F1D] duration-[0.7s] max-[1119px]:flex  max-[1118px]:m-[auto] max-[1115px]:mt-[25px] ">
+                        Download
+                    </button>
+                </div>
+                <div data-aos="fade-right">
+                    <img src="./images/Thousand-03.svg" alt="">
+                </div>
+            </section>
+        </section>
+        <section class=" pt-[150px] pb-[100px]">
+            <p style="font-family: Playfair Display;
+            line-height: 50px;" class="  text-[36px] pl-[240px] font-bold max-[1119px]:text-center ">
+                Testimonials
+            </p>
+            <div class="flex justify-around">
+                <div class="mt-[100px] ">
+                    <span class="text-[#FFBB0C]  ">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <p style="font-family: Muli;
+                font-weight: 400;">“Quisque in lacus a urna fermentum <br>
+                        euismod. Integer mi nibh, dapibus ac <br>
+                        scelerisque eu, facilisis quis purus. Morbi <br>
+                        blandit sit amet turpis nec”
+                    </p>
+                    <p style="font-family: Inter;
+                line-height: 48px;
+                font-weight: 700;" class="text-[22px] pt-[40px] ">
+                        Edward Newgate
+                    </p>
+                    <p style="font-family: Inter;
+                line-height: 48px;
+                font-weight: 400;" class="text-[18px]"> Founder Circle</p>
+                </div>
+
+                <div style=" background-image: url(./images/photo.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 384px;
+                height: 491px;
+                border-radius: 5px;" class="pt-[431px] mt-[-15px]">
+                    <div id="button" class="w-[132px] h-[60px] bg-white">
+                        <button class="w-[40px] h-[40px] rounded-[100%]"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="w-[40px] h-[40px] rounded-[100%]"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="flex justify-around pb-[213px] max-[941px]:grid">
+
+        </section>
+        <section class="pb-[250px]">
+            <div class="flex justify-around items-center">
+                <p 
+                    class="font-[Playfair] font-bold text-[36px] text-[#000000] max-[491px]:text-[26px] max-[375px]:text-[23px]">
+                    Trending stories
+                </p>
+                <p  class="text-[17px]   font-[Inter] font-semibold text-[#FB8F1D]">
+                    View all  >
+                </p>
+            </div>
+            <div class="flex justify-center gap-[25px] max-[1144px]:grid mt-[56px] " >
+                <div>
+                    <img src="./images/human.svg"
+                        class="w-[288px] h-[233px] rounded-[6px] pb-[13px] max-[1248px]:w-[250px]" alt="" />
+                    <p class="font-[Inter] font-bold text-[19px] text-[#000000] pb-[13px]">
+                        The many benefits of <br />
+                        taking a healing holiday
+                    </p>
+                    <p class="font-[Inter] font-normal text-[15px] text-[#7D7987] pb-[23px]">
+                        ‘Helaing holidays’ are on the rise <br />
+                        tohelp maximise your health and <br />
+                        happines...
+                    </p>
+                    <p class="font-[Inter] font-semibold text-[15px] text-[#FB8F1D]">
+                        Read more
+                    </p>
+                </div>
+                <div >
+                    <img src="./images/Mask Group (2).svg"
+                        class="w-[288px] h-[233px] rounded-[6px] pb-[13px] max-[1248px]:w-[250px]" alt="" />
+                    <p class="font-[Inter] font-bold text-[19px] text-[#000000] pb-[13px]">
+                        The best Kyoto restaurant <br />
+                        to try Japanese food
+                    </p>
+                    <p class="font-[Inter] font-normal text-[15px] text-[#7D7987] pb-[23px]">
+                        From tofu to teahouses, here’s our <br />
+                        guide to Kyoto’s best restaurants <br />
+                        to visit...
+                    </p>
+                    <p class="font-[Inter] font-semibold text-[15px] text-[#FB8F1D]">
+                        Read more
+                    </p>
+                </div>
+                <div >
+                    <img src="./images/china.svg"
+                        class="w-[288px] h-[233px] rounded-[6px] pb-[13px] max-[1248px]:w-[250px]" alt="" />
+                    <p class="font-[Inter] font-bold text-[19px] text-[#000000] pb-[13px]">
+                        Skip Chichen Itza and head <br />
+                        to this remote Yucatan
+                    </p>
+                    <p class="font-[Inter] font-normal text-[15px] text-[#7D7987] pb-[23px]">
+                        It’s remote and challenging to get, <br />
+                        but braving the jungle and exploring <br />
+                        these ruins without the...
+                    </p>
+                    <p class="font-[Inter] font-semibold text-[15px] text-[#FB8F1D]">
+                        Read more
+                    </p>
+                </div>
+                <div>
+                    <img src="./images/image 15.svg"
+                        class="w-[288px] h-[233px] rounded-[6px] pb-[13px] max-[1248px]:w-[250px]" alt="" />
+                    <p class="font-[Inter] font-bold text-[19px] text-[#000000] pb-[13px]">
+                        Surf’s up at these beginner <br />
+                        spots around the world
+                    </p>
+                    <p class="font-[Inter] font-normal text-[15px] text-[#7D7987] pb-[23px]">
+                        If learning to surf has in on your to- <br />
+                        do list for a while, the good news <br />
+                        is: it’s never too late...
+                    </p>
+                    <p class="font-[Inter] font-semibold text-[15px] text-[#FB8F1D]">
+                        Read more
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="flex justify-around pb-[39px] bg-[#F9F9FB] pt-[70px] max-[1107px]:block max-[1107px]:pl-[30px]">
+            <ul>
+                <li>
+                    <img src="./images/logo.svg" class="pb-[26px]" alt="" />
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[55px] max-[351px]:text-[15px]">
+                    Plan and book your perfect trip with <br />
+                    expert advice, travel tips destination <br />
+                    information from us
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] max-[447px]:text-[14px]">
+                    ©2020 Thousand Sunny. All rights reserved
+                </li>
+            </ul>
+            <ul>
+                <li class="font-bold font-[Inter] text-[19px] text-[#000000] pb-[20px]">
+                    Destinations
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Africa
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Antarctica
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Asia
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Europe
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484]">
+                    America
+                </li>
+            </ul>
+            <ul>
+                <li class="font-bold font-[Inter] text-[19px] text-[#000000] pb-[20px]">
+                    Shop
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Destination Guides
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Pictorial & Gifts
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Special Offers
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Delivery Times
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484]">
+                    FAQs
+                </li>
+            </ul>
+            <ul>
+                <li class="font-bold font-[Inter] text-[19px] text-[#000000] pb-[20px]">
+                    Interests
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Adventure Travel
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Art And Culture
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Wildlife And Nature
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484] pb-[14px]">
+                    Family Holidays
+                </li>
+                <li class="font-light font-[Inter] text-[18px] text-[#848484]">
+                    Food And Drink
+                </li>
+            </ul>
+        </section>
+        <hr
+            class="w-[1219px] h-[0,6px] text-[#C4C4C4] flex m-[auto] max-[1241px]:w-[1000px] max-[1040px]:w-[800px] max-[840px]:w-[600px] max-[640px]:w-[400px] max-[440px]:w-[300px]" />
+
+        </section>
+    </main>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
